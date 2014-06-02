@@ -9,7 +9,7 @@ end
 
 gemspec
 
-#gem "ripper", :group => :development, :platforms => :mri_18
+gem "ripper", :group => :development, :platforms => :mri_18
 gem 'nokogiri',         '~> 1.5.10'
 gem 'redcarpet',         '~> 2.3.0'
 
