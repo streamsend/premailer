@@ -154,7 +154,7 @@ END_HTML
   def test_does_not_add_html_tags_when_css_to_attributes_false
     [:hpricot, :nokogiri].each do |adapter|
       premailer = Premailer.new('<img style="float: right">test</p>', :with_html_string => true, :adapter => adapter, :css_to_attributes => false)
-      refute_match /align/, premailer.to_inline_css
+      assert_no_match /align/, premailer.to_inline_css
       premailer = Premailer.new('<img style="float: right">test</p>', :with_html_string => true, :adapter => adapter)
       assert_match /align/, premailer.to_inline_css
     end
